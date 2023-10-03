@@ -2,7 +2,11 @@
 
 class Product {
     // TODO: Add properties
-    public $id, $name, $price;
+    public int $id;
+    public string $name;
+    public float $price;
+
+    // private $id, $name, $price; 
 
     public function __construct( $id, $name, $price ) {
         // TODO: Initialize properties
@@ -13,7 +17,7 @@ class Product {
 
     // TODO: Add getFormattedPrice method
     public function getFormattedPrice() {
-        return number_format( $this->price, 2 );
+        return "$". number_format( $this->price, 2 );
     }
 
     // TODO: Add showDetails method
